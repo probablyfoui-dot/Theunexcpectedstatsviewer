@@ -1,11 +1,8 @@
 """
 cogs/quent.py
 -------------
-Commande unifiée /quent (category) (username).
-- Header : rank + IGN en grand, category en dessous
-- Bouton About (éphémère) avec description de la stat
-- grid=False : une ligne label/valeur
-- grid=True  : grille 3 colonnes
+/quent command
+unusual stuff
 """
 
 import io
@@ -89,7 +86,6 @@ def px(draw, x, y, text, font, color=C_WHITE, anchor="la"):
 
 # ---------------------------------------------------------------------------
 # IMAGE BUILDER
-# Header: accent bar | rank + IGN (big) | category subtitle | separator
 # ---------------------------------------------------------------------------
 
 W = 860
@@ -129,7 +125,7 @@ def build_image(title_segments, title_base_color: tuple,
     # Accent bar
     d.rectangle([0, 0, W, 4], fill=title_base_color)
 
-    # IGN line (rank segments + big IGN)
+    # IGN line (rank segments + IGN)
     ign_y = 12
     seg_w = segments_width(d, title_segments, f28) if title_segments else 0
     draw_segments(d, RX, ign_y, title_segments, f28)
@@ -164,7 +160,7 @@ def build_image(title_segments, title_base_color: tuple,
     return buf
 
 # ---------------------------------------------------------------------------
-# ABOUT VIEW (ephemeral button)
+# ABOUT VIEW
 # ---------------------------------------------------------------------------
 
 class AboutView(discord.ui.View):
