@@ -718,7 +718,7 @@ const MODE_CATS: &[(&str, &[(&str, &str)])] = &[
 
 fn about(cat: &str) -> &'static str {
     match cat {
-        "bwminion" => "Slumber hotel minion — earns ender dust and tickets passively.",
+        "bwminion" => "The Slumber hotel minion earns ender dust and tickets passively.",
         "gamblegeorge" => "NPC in the slumber hotel. How many times you've won against him.",
         "privategames" => "Bedwars private game settings like event time multiplier.",
         "practice" => "Bridging blocks placed and selected practice mode.",
